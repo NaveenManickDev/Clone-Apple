@@ -2,20 +2,20 @@ import heroImage from './images/Products/hero_bts_2025__kjxalx8t7ia2_mediumtall.
 
 const Header = () => {
   return (
-    <header className='text-center text-white'>
-        <div style={{backgroundImage: `url(${heroImage})`, }} className='mx-auto' >
-          <div className=' bg-blue-500 rounded-lg w-36 mx-auto p-4'>
-            <h1 className='text-white text-sm font-semibold'>Buy Mac or iPad for college</h1>
-          </div>          
-        <div className=' bg-blue-500 rounded-lg w-36 mx-auto p-4 mt-10'>
-            <p className='text-white'>with education savings</p>
-        </div>
-        <div className=' bg-blue-500 rounded-lg w-36 mx-auto p-4 mt-10'>
-            <h1 className='text-white'>Choose Airpods or an eligible accessory</h1>
-        </div>
-        <button className='border border-blue-400 py-2 px-4 rounded-3xl  hover:bg-blue-500 hover:text-white text-blue-500 mt-4'>Shop</button>
-        
-        </div>
+    <header className='text-center text-white h-screen flex flex-col items-center justify-center bg-cover mx-auto mt-3' 
+    style={{backgroundImage: `url(${heroImage})`, }}>
+
+      <h1 className='text-3xl font-bold w-60 bg-blue-500 p-5 rounded-3xl cursor-pointer'>
+        Buy Mac or iPad for college</h1>
+
+      <p className='text-xl font-bold w-60 bg-blue-500 p-2 rounded-3xl mt-5 cursor-pointer'>
+        with education savings</p>
+
+      <p className='text-3xl font-bold w-60 bg-blue-500 p-5 rounded-3xl mt-5 cursor-pointer'>
+        Choose Airpods or an eligible accessory</p>
+
+      <button className='border border-blue-400 py-2 px-4 rounded-3xl  hover:bg-blue-500 hover:text-white text-blue-500 mt-4'>
+        Shop</button>  
         
     </header>
   )
