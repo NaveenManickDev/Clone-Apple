@@ -3,7 +3,7 @@ import heroImage from './images/Products/hero_macbook_air_avail__fpm99qgohx2e_me
 
 const Hero2 = () => {
   return (
-    <section className='text-center text-black h-96 flex flex-col items-center justify-center bg-cover mx-auto mt-3 cursor-pointer' 
+    <section className='text-center text-black h-96 flex flex-col items-center justify-center bg-cover mx-auto mt-3 cursor-pointer ' 
         style={{backgroundImage: `url(${heroImage})`, }}>
 
           <div className='mb-56'>

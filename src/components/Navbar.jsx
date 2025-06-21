@@ -5,11 +5,10 @@ const Navbar = () => {
   return (
     <>
     <nav className='container bg-gray-50 p-4 mx-auto'>
-        <ul className='flex justify-between text-sm text-center'>
-
+        <ul className='hidden justify-between text-sm text-center md:flex'>
             <li>
-                <a href=""><FaApple/> </a>
-            </li>
+                <a href=""><FaApple size={20}/> </a>
+            </li>            
             <li >                 
                 <a href="">Store</a>
             </li>
@@ -40,13 +39,14 @@ const Navbar = () => {
             <li>
                 <a href="">Support</a>
             </li>
-            <li>
-                <a href=""><FaSearch/></a>
-            </li>
              <li>
-                <a href=""><FaShoppingBag/></a>
+                <a href=""><FaSearch size={20}/></a>
             </li>
-        </ul>                
+            <li>
+                <a href=""><FaShoppingBag size={20}/></a>
+            </li>            
+        </ul>   
+
    </nav>
     <p className='text-center pt-2'>Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 
         instant cashback‡ on selected products with eligible cards. 
