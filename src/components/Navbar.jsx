@@ -48,7 +48,7 @@ const Navbar = () => {
         </ul>   
 
    </nav>
-    <p className='text-center pt-2 mt-12'>Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 
+    <p className='text-center pt-2 mt-12 flex-wrap'>Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 
         instant cashback‡ on selected products with eligible cards. 
         <a className='text-blue-500 hover:underline' href="#">Shop</a> 
     </p>
