@@ -6,7 +6,7 @@ const Hero = () => {
   const bgImage = isDesktop ? desktopImages : mobileImages;
   return (
     <section
-      className="text-center text-white h-[70vh] sm:h-[80vh] md:h-[90vh] flex flex-col items-center justify-end bg-cover bg-center mt-4"
+      className="text-center text-white h-[70vh] sm:h-[80vh] md:h-[70vh] flex flex-col items-center justify-end bg-cover bg-center mt-4"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <button className="border py-2 px-6 rounded-full mb-10 text-black bg-white hover:bg-gray-200 transition">

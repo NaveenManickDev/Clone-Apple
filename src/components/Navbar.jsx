@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
     <nav className='container bg-gray-50 p-4 mx-auto'>
-        <ul className='hidden justify-between text-sm text-center md:flex'>
+        <ul className='hidden justify-center gap-10 text-xs text-center md:flex'>
             <li>
                 <a href=""><FaApple size={20}/> </a>
             </li>            

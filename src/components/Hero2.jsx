@@ -5,7 +5,7 @@ const Hero2 = () => {
   const isDesktop = window.innerWidth >= 768;
   const bgImage = isDesktop ? desktopImages : mobileImages;
   return (
-    <section className="text-center text-white h-[70vh] sm:h-[80vh] md:h-[90vh] flex flex-col items-center justify-end bg-cover bg-center mt-4 cursor-pointer"
+    <section className="text-center text-white h-[60vh] sm:h-[60vh] md:h-[60vh] flex flex-col items-center justify-end bg-cover bg-center mt-4 cursor-pointer"
         style={{backgroundImage: `url(${bgImage})`, }}>
 
           <div className='mb-96'>
