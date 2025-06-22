@@ -1,9 +1,59 @@
 import React from 'react'
 
 const Footer = () => {
+  const footerData = [
+  {
+    title: 'Shop and Learn',
+    items: ['Store', 'Mac', 'iPad', 'iPhone', 'Watch', 'AirPods', 'TV & Home', 'AitTag', 'Accessories', 'Gift Cards'],
+    subSections: [
+      {
+        title: 'Apple Wallet',
+        items: ['Wallet'],
+      },
+    ],
+  },
+  {
+    title: 'Account',
+    items: ['Manage Your Apple Account', 'Apple Store Account', 'iCloud.com'],
+    subSections: [
+      {
+        title: 'Entertainment',
+        items: ['Apple One', 'Apple TV+', 'Apple Music', 'Apple Arcade', 'Apple Podcasts', 'Apple Books', 'App Store'],
+      },
+    ],
+  },
+  {
+    title: 'Apple Store',
+    items: ['Find a Store', 'Genius Bar', 'Today at Apple', 'Group Reservations', 'Apple Camp', 'Apple Trade In', 'Ways to Buy', 'Recycling Programme', 'Order Status', 'Shopping Help'],
+  },
+  {
+    title: 'For Business',
+    items: ['Apple and Business', 'Shop for Business'],
+    subSections: [
+      {
+        title: 'For Education',
+        items: ['Apple and Education', 'Shop for Education', 'Shop for University'],
+      },
+      {
+        title: 'For Healthcare',
+        items: ['Apple in Healthcare', 'Mac in Healthcare', 'Health on Apple Watch'],
+      },
+    ],
+  },
+  {
+    title: 'Apple Values',
+    items: ['Accessibility', 'Education', 'Environment', 'Privacy', 'Supply Chain Innovation'],
+    subSections: [
+      {
+        title: 'About Apple',
+        items: ['Newsroom', 'Apple Leadership', 'Career Opportunities', 'Investors', 'Ethics & Compliance', 'Events', 'Contact Apple'],
+      },
+    ],
+  },
+];
   return (
     <footer className="bg-gray-200 py-6 px-4 sm:px-8">
-  <div className="max-w-5xl mx-auto text-xs text-gray-800/60 space-y-4 leading-relaxed border border-b-gray-400">
+  <div className="max-w-5xl mx-auto text-xs text-gray-800/60 space-y-4 leading-relaxed ">
     <p>
       ◊No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3-, 6-, 9- or 12-month tenures from most leading card issuers. Eligible AirPods, HomePod and Beats products are available with No Cost EMI on 3- and 6-month tenures only. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your card issuer, subject to your card issuer’s terms and conditions. Minimum order spend applies as per your card issuer’s threshold. No Cost EMI is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Card eligibility is subject to terms and conditions between you and your card issuer. Offer may be revised or withdrawn at any time without any prior notice. Terms apply.
     </p>
@@ -32,123 +82,65 @@ const Footer = () => {
     <p>
       Features are subject to change. Some features, applications and services may not be available in all regions or all languages.
     </p>
+  </div>  
+   <div className="container mx-auto max-w-screen-lg grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-5 px-4">
+  {footerData.map((section, index) => (
+    <div key={index}>
+      {/* Main Title */}
+      <ul>
+        <li className="font-medium text-base mb-1">{section.title}</li>
+      </ul>
+
+      {/* Main Items */}
+      <ul className="text-gray-900/80">
+        {section.items.map((item, i) => (
+          <li key={i} className="text-xs mt-1 or-poincurster">
+            {item}
+          </li>
+        ))}
+      </ul>
+
+      {/* Sub Sections */}
+      {section.subSections &&
+        section.subSections.map((sub, j) => (
+          <div key={j}>
+            <ul>
+              <li className="mt-4 font-medium text-base">{sub.title}</li>
+            </ul>
+            <ul className="text-gray-900/80">
+              {sub.items.map((subItem, k) => (
+                <li key={k} className="text-xs mt-1 cursor-pointer">
+                  {subItem}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+    </div>
+  ))}
+</div>
+  
+  <div className='container mx-auto max-w-screen-lg grid px-4'>
+    <p className='text-sm text-gray-800/80 border border-b-gray-400'>More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</p>
   </div>
-  <div className='flex justify-center space-x-24 mt-5'>
-    <div>
-      <ul>
-        <li>Shop and Learn</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Store</li>
-        <li className='text-xs mt-1'>Mac</li>
-        <li className='text-xs mt-1'>iPad</li>
-        <li className='text-xs mt-1'>iPhone</li>
-        <li className='text-xs mt-1'>Watch</li>
-        <li className='text-xs mt-1'>AirPods</li>
-        <li className='text-xs mt-1'>TV & Home</li>
-        <li className='text-xs mt-1'>AitTag</li>
-        <li className='text-xs mt-1'>Accessories</li>
-        <li className='text-xs mt-1'>Gift Cards</li>
-      </ul>
-      <ul>
-        <li className='mt-3'>Apple Wallet</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Wallet</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li>Account</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Manage Your Apple Account</li>
-        <li className='text-xs mt-1'>Apple Store Account</li>
-        <li className='text-xs mt-1'>iCloud.com</li>
-      </ul>
-      <ul>
-        <li className='mt-3'>Entertainment</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Apple One</li>
-        <li className='text-xs mt-1'>Apple TV+</li>
-        <li className='text-xs mt-1'>Apple Music</li>
-        <li className='text-xs mt-1'>Apple Arcade</li>
-        <li className='text-xs mt-1'>Apple Podcasts</li>
-        <li className='text-xs mt-1'>Apple Books</li>
-        <li className='text-xs mt-1'>App Store</li>
-      </ul>
-    </div>
-     <div>
-      <ul>
-        <li>Apple Store</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Find a Store</li>
-        <li className='text-xs mt-1'>Genius Bar</li>
-        <li className='text-xs mt-1'>Today at Apple</li>
-        <li className='text-xs mt-1'>Group Reservations</li>
-        <li className='text-xs mt-1'>Apple Camp</li>
-        <li className='text-xs mt-1'>Apple Trade In</li>
-        <li className='text-xs mt-1'>Ways to Buy</li>
-        <li className='text-xs mt-1'>Recycling Programme</li>
-        <li className='text-xs mt-1'>Order Status</li>
-        <li className='text-xs mt-1'>Shopping Help</li>
-      </ul>      
-    </div>
-     <div>
-      <ul>
-        <li>For Business</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Apple and Business</li>
-        <li className='text-xs mt-1'>Shop for Business</li>
-      </ul>
-      <ul>
-        <li className='mt-3'>For Education</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Apple and Education</li>
-        <li className='text-xs mt-1'>Shop for Education</li>
-        <li className='text-xs mt-1'>Shop for University</li>
-      </ul>
-      <ul>
-        <li className='mt-3'>For Healthcare</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Apple in Healthcare</li>
-        <li className='text-xs mt-1'>Mac in Healthcare</li>
-        <li className='text-xs mt-1'>Health on Apple Watch</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li>Apple Values</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Accessibility</li>
-        <li className='text-xs mt-1'>Education</li>
-        <li className='text-xs mt-1'>Environment</li>
-        <li className='text-xs mt-1'>Privacy</li>
-        <li className='text-xs mt-1'>Supply Chain Innovation</li>
-      </ul>
-      <ul>
-        <li className='mt-3'>About Apple</li>
-      </ul>
-      <ul className='text-gray-900/80'>
-        <li className='text-xs mt-1'>Newsroom</li>
-        <li className='text-xs mt-1'>Apple Leadership</li>
-        <li className='text-xs mt-1'>Career Opportunities</li>
-        <li className='text-xs mt-1'>Investors</li>
-        <li className='text-xs mt-1'>Ethics & Compliance</li>
-        <li className='text-xs mt-1'>Events</li>
-        <li className='text-xs mt-1'>Contact Apple</li>
-      </ul>      
-    </div>   
-  </div>
-  <div className='text-center -ml-96 text-sm'>
-    <p>More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</p>
-  </div>
+  <div className="flex justify-between items-center flex-wrap container mx-auto max-w-screen-lg px-4 py-4 border-b">
+  {/* Left Section */}
+  <p className="text-sm text-gray-800/80">
+    Copyright © 2025 Apple Inc. All rights reserved.
+  </p>
+
+  {/* Middle Section */}
+  <ul className="flex flex-wrap gap-4 text-sm text-gray-800/80">
+    <li className='cursor-pointer hover:underline'>Privacy Policy |</li>
+    <li  className='cursor-pointer hover:underline'>Terms of Use |</li>
+    <li  className='cursor-pointer hover:underline'>Sales Policy |</li>
+    <li  className='cursor-pointer hover:underline'>Legal |</li>
+    <li  className='cursor-pointer hover:underline'>Site Map</li>
+  </ul>
+
+  {/* Right Section */}
+  <p className="text-sm text-gray-800/80 cursor-pointer hover:underline">India</p>
+</div>
 </footer>
   )
 }
