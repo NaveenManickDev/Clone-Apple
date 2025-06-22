@@ -1,9 +1,13 @@
-import heroImage from './images/Products/hero_bts_2025__kjxalx8t7ia2_mediumtall.jpg'; 
+
+import mobileImages from "./images/Hero/mac_for_students_hero__dbi4flqyio2u_mediumtall.jpg"
+import desktopImages from "./images/desktop/hero_bts_2025__kjxalx8t7ia2_largetall.jpg"
 
 const Header = () => {
+  const isDesktop = window.innerWidth >= 768;
+    const bgImage = isDesktop ? desktopImages : mobileImages;
   return (
     <header className='text-center text-white h-1/2 flex flex-col items-center justify-center bg-cover mx-auto mt-3 cursor-pointer' 
-    style={{backgroundImage: `url(${heroImage})`, }}>
+    style={{backgroundImage: `url(${bgImage})`, }}>
 
       <h1 className='text-3xl font-bold w-60 bg-blue-500 p-5 rounded-3xl cursor-pointer mt-5'>
         Buy Mac or iPad for college</h1>

@@ -1,10 +1,12 @@
-import React from 'react'
-import heroImage from './images/Products/hero_macbook_air_avail__fpm99qgohx2e_mediumtall.jpg'; 
+import mobileImages from ".//images/mobile/hero_macbook_air_avail__fpm99qgohx2e_small.jpg"
+import desktopImages from "./images/desktop/hero_macbook_air_avail__fpm99qgohx2e_largetall.jpg"
 
 const Hero2 = () => {
+  const isDesktop = window.innerWidth >= 768;
+  const bgImage = isDesktop ? desktopImages : mobileImages;
   return (
     <section className="text-center text-white h-[70vh] sm:h-[80vh] md:h-[90vh] flex flex-col items-center justify-end bg-cover bg-center mt-4 cursor-pointer"
-        style={{backgroundImage: `url(${heroImage})`, }}>
+        style={{backgroundImage: `url(${bgImage})`, }}>
 
           <div className='mb-96'>
             <h1 className='text-3xl text-black'>MacBook Air</h1>
