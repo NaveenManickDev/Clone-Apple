@@ -1,38 +1,54 @@
-import React, { useState, useEffect } from "react";
-import mobileImage from "./images/mobile/mac_for_students_hero__dbi4flqyio2u_small.jpg";
-import desktopImage from "./images/desktop/promo_ios18__eo1lt24j3wk2_large.jpg";
+import img1 from './images/desktop/promo_ipad_air__bfbxzvw65c02_large.jpg';
+import img2 from './images/Products/promo_iphone_tradein__bugw15ka691e_medium.jpg';
+import img3 from './images/desktop/promo_ios18__eo1lt24j3wk2_large.jpg';
+import img4 from './images/Products/promo_iphone_family__ofrg9zdy1teq_medium.jpg';
 
 const Product = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
-
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const selectedImage = isDesktop ? desktopImage : mobileImage;
+  const productData = [
+    {
+      id: 1,
+      title: "iOS 18",
+      lines: ["Personalise your iPhone with", "10 new Indian languages"],
+      bgImage: img1,
+      highlight: true,
+    },
+    {
+      id: 2,
+      title: "iPad air",
+      lines: ["Now supercharged by the M3 chip"],
+      bgImage: img2,
+    },
+    {
+      id: 3,
+      title: "MacBook pro",
+      lines: ["A work of smart"],
+      bgImage: img3,
+    },
+    {
+      id: 4,
+      title: "iPhone",
+      lines: ["Meet the iPhone 16 family"],
+      bgImage: img4,
+    },
+  ];
 
   return (
-    <section className="w-full flex m-2 flex-wrap">
-      <div className="w-full h-screen overflow-hidden m-2">
-        <img
-          src={selectedImage}
-          alt="Product 1"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      <div className="w-full h-screen overflow-hidden m-2">
-        <img
-          src={selectedImage}
-          alt="Product 2"
-          className="w-full h-full object-cover"
-        />
-        
-      </div>
-      
-    </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-auto p-1">
+      {productData.map(({ id, title, lines, bgImage, highlight }) => (
+        <div
+          key={id}
+          className="text-center text-white h-[60vh] flex flex-col items-center justify-end bg-cover bg-center mt-4 cursor-pointer"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        >
+          <div className={highlight ? 'mb-96' : 'mb-96'}>
+            <h1 className="text-black text-3xl font-bold">{title}</h1>
+            {lines.map((line, index) => (
+              <p key={index} className="text-black text-2xl">{line}</p>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

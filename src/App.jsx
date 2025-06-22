@@ -15,8 +15,7 @@ function App() {
       <Hero />
       <Hero2 />      
       <Product />
-      <Footer />
-      
+      <Footer />      
     </>
   )
 }
