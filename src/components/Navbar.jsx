@@ -4,7 +4,7 @@ import {FaApple, FaSearch, FaShoppingBag} from "react-icons/fa"
 const Navbar = () => {
   return (
     <>
-    <nav className='container bg-gray-50 p-4 mx-auto'>
+    <nav className='w-screen fixed top-0  bg-gray-50 p-4 mx-auto'>
         <ul className='hidden justify-center gap-10 text-xs text-center md:flex'>
             <li>
                 <a href=""><FaApple size={20}/> </a>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <a href="">Support</a>
             </li>
              <li>
-                <a href=""><FaSearch size={20}/></a>
+                <a href=""><FaSearch size={15}/></a>
             </li>
             <li>
                 <a href=""><FaShoppingBag size={20}/></a>
@@ -48,7 +48,7 @@ const Navbar = () => {
         </ul>   
 
    </nav>
-    <p className='text-center pt-2'>Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 
+    <p className='text-center pt-2 mt-12'>Get up to 12 months of No Cost EMI◊ plus up to ₹8000.00 
         instant cashback‡ on selected products with eligible cards. 
         <a className='text-blue-500 hover:underline' href="#">Shop</a> 
     </p>
